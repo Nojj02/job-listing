@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Card from "../Card/component";
 
 const JobListing = () => {
   const cardsContent = [
@@ -13,7 +14,7 @@ const JobListing = () => {
   ];
 
   const cards = cardsContent.map((cardContent) => (
-    <div className="card">{cardContent.value}</div>
+    <Card value={cardContent.value}></Card>
   ));
 
   return (
