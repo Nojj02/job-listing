@@ -2,13 +2,15 @@ import React from "react";
 import "./style.css";
 
 interface CardProps {
-  value : string
+  companyName: string;
+  jobTitle: string;  
 }
 
-const Card = (props : CardProps) => {
+const Card = (props: CardProps) => {
   return (
     <div className="Card">
-      {props.value}
+      <div className="company-name">{props.companyName}</div>
+      <div className="job-title">{props.jobTitle}</div>
     </div>
   );
 };

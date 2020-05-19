@@ -4,17 +4,15 @@ import Card from "../Card/component";
 
 const JobListing = () => {
   const cardsContent = [
-    { value: "A" },
-    { value: "B" },
-    { value: "C" },
-    { value: "D" },
-    { value: "E" },
-    { value: "F" },
-    { value: "G" },
+    { companyName: "Photosnap", jobTitle: "Senior Frontend Developer" },
+    { companyName: "Manage", jobTitle: "Fullstack Developer" },
+    { companyName: "Account", jobTitle: "Junior Frontend Developer" },
   ];
 
   const cards = cardsContent.map((cardContent) => (
-    <Card value={cardContent.value}></Card>
+    <Card companyName={cardContent.companyName}
+      jobTitle={cardContent.jobTitle}
+    />
   ));
 
   return (

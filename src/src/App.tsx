@@ -1,6 +1,7 @@
 import React from "react";
 import JobListing from "./JobListing/component";
 import "./App.css";
+import "./fonts.css";
 
 const App = () => {
   return (
