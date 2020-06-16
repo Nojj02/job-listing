@@ -5,6 +5,16 @@
   margin-bottom: 24px;
   box-shadow: 0 5px 25px 0px hsl(180, 29%, 80%);
   padding: 30px 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Card .left {
+  flex: 1;
+}
+
+.Card .right {
+  flex: 1;
 }
 
 .Card:hover {

@@ -12,18 +12,25 @@ export interface CardProps {
 export enum EmploymentType {
   FullTime = "Full Time",
   PartTime = "Part Time",
-  Contractual = "Contractual"
+  Contractual = "Contractual",
 }
 
 const Card = (props: CardProps) => {
   return (
     <div className="Card">
-      <div className="company-name">{props.companyName}</div>
-      <div className="job-title">{props.jobTitle}</div>
-      <div className="details">
-        <span className="time-since-posting">{props.timeSincePosting}</span>
-        <span className="employment-type">{props.employmentType}</span>
-        <span className="location">{props.location}</span>
+      <div className="left">
+        <div className="company-name">{props.companyName}</div>
+        <div className="job-title">{props.jobTitle}</div>
+        <div className="details">
+          <span className="time-since-posting">{props.timeSincePosting}</span>
+          <span className="employment-type">{props.employmentType}</span>
+          <span className="location">{props.location}</span>
+        </div>
+      </div>
+      <div>
+        <div className="tags">
+          <div className="role">Frontend</div>
+        </div>
       </div>
     </div>
   );
