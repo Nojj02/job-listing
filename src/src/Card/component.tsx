@@ -16,6 +16,12 @@ export enum EmploymentType {
 }
 
 const Card = (props: CardProps) => {
+  const tags = ["Frontend", "Senior", "HTML", "CSS", "JavaScript"];
+  const tagComponents = [];
+  for (const tag of tags) {
+    tagComponents.push(<div className="tag">{tag}</div>);
+  }
+
   return (
     <div className="Card">
       <div className="left">
@@ -27,9 +33,9 @@ const Card = (props: CardProps) => {
           <span className="location">{props.location}</span>
         </div>
       </div>
-      <div>
+      <div className="right">
         <div className="tags">
-          <div className="role">Frontend</div>
+          {tagComponents}
         </div>
       </div>
     </div>
