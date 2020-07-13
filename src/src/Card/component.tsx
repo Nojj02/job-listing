@@ -7,6 +7,10 @@ export interface CardProps {
   timeSincePosting: string;
   employmentType: EmploymentType;
   location: string;
+  role: string;
+  level: string;
+  languages: string[] | undefined;
+  tools: string[] | undefined;
 }
 
 export enum EmploymentType {
@@ -16,7 +20,11 @@ export enum EmploymentType {
 }
 
 const Card = (props: CardProps) => {
-  const tags = ["Frontend", "Senior", "HTML", "CSS", "JavaScript"];
+  const tags: string[] = [];
+  tags.push(props.role);
+  tags.push(props.level);
+  tags.push(...(props.languages || []));
+  tags.push(...(props.tools || []));
   const tagComponents = [];
   for (const tag of tags) {
     tagComponents.push(<div className="tag">{tag}</div>);
@@ -34,9 +42,7 @@ const Card = (props: CardProps) => {
         </div>
       </div>
       <div className="right">
-        <div className="tags">
-          {tagComponents}
-        </div>
+        <div className="tags">{tagComponents}</div>
       </div>
     </div>
   );
