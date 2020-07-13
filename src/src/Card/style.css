@@ -24,6 +24,15 @@
   box-shadow: 0 5px 25px 0px hsl(180, 29%, 40%);
 }
 
+.Card .company-image {
+  display: inline-block;
+  margin-right: 28px;
+}
+
+.Card .company-info {
+  display: inline-block;
+}
+
 .Card .company-name {
   color: hsl(180, 29%, 50%);
   font-weight: 600;

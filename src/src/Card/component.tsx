@@ -3,6 +3,7 @@ import "./style.css";
 
 export interface CardProps {
   companyName: string;
+  companyCode: string;
   jobTitle: string;
   timeSincePosting: string;
   employmentType: EmploymentType;
@@ -29,16 +30,22 @@ const Card = (props: CardProps) => {
   for (const tag of tags) {
     tagComponents.push(<div className="tag">{tag}</div>);
   }
+  const imageSrc = require(`../assets/logos/${props.companyCode}.svg`);
 
   return (
     <div className="Card">
       <div className="left">
-        <div className="company-name">{props.companyName}</div>
-        <div className="job-title">{props.jobTitle}</div>
-        <div className="details">
-          <span className="time-since-posting">{props.timeSincePosting}</span>
-          <span className="employment-type">{props.employmentType}</span>
-          <span className="location">{props.location}</span>
+        <div className="company-image">
+          <img src={imageSrc} />
+        </div>
+        <div className="company-info">
+          <div className="company-name">{props.companyName}</div>        
+          <div className="job-title">{props.jobTitle}</div>
+          <div className="details">
+            <span className="time-since-posting">{props.timeSincePosting}</span>
+            <span className="employment-type">{props.employmentType}</span>
+            <span className="location">{props.location}</span>
+          </div>
         </div>
       </div>
       <div className="right">
