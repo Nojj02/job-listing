@@ -3,10 +3,15 @@
   border-radius: 6px;
   height: 90px;
   margin-bottom: 24px;
-  box-shadow: 0 5px 25px 0px hsl(180, 29%, 80%);
+  box-shadow: 0 10px 17px 0px hsl(180, 29%, 80%);
   padding: 30px 40px;
   display: flex;
   flex-direction: row;
+  background: #fff;
+}
+
+.Card.card-featured {
+  border-left: 6px solid hsl(180, 29%, 50%);
 }
 
 .Card .left {
@@ -21,7 +26,7 @@
 }
 
 .Card:hover {
-  box-shadow: 0 5px 25px 0px hsl(180, 29%, 40%);
+  box-shadow: 0 10px 17px 0px hsl(180, 8%, 52%);
 }
 
 .Card .company-image {
@@ -34,10 +39,31 @@
 }
 
 .Card .company-name {
+  display: inline-block;
   color: hsl(180, 29%, 50%);
   font-weight: 600;
   font-size: 15px;
-  padding: 2px 0;
+  padding: 2px 17px 2px 0;
+}
+
+.Card .card-callout {
+  display: inline-block;
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 8px 8px 4px 8px;
+  margin-right: 10px;
+}
+
+.Card .card-new {
+  background-color: hsl(180, 29%, 50%);
+}
+
+.Card .card-featured {
+  background-color: #333;
+
 }
 
 .Card .job-title {
