@@ -53,7 +53,7 @@ const Card = (props: CardProps) => {
     <div className={cardClass}>
       <div className="left">
         <div className="company-image">
-          <img src={imageSrc} />
+          <img src={imageSrc} alt={props.companyName} />
         </div>
         <div className="company-info">
           <div className="company-info-head">
